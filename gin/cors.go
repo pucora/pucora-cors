@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	veloneticscors "github.com/pucora/velonetics-cors/v2"
-	"github.com/pucora/velonetics-cors/v2/mux"
+	pucoracors "github.com/pucora/pucora-cors/v2"
+	"github.com/pucora/pucora-cors/v2/mux"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 	"github.com/rs/cors"
@@ -15,11 +15,11 @@ import (
 
 // New returns a gin.HandlerFunc with the CORS configuration provided in the ExtraConfig
 func New(e config.ExtraConfig) gin.HandlerFunc {
-	tmp := veloneticscors.ConfigGetter(e)
+	tmp := pucoracors.ConfigGetter(e)
 	if tmp == nil {
 		return nil
 	}
-	cfg, ok := tmp.(veloneticscors.Config)
+	cfg, ok := tmp.(pucoracors.Config)
 	if !ok {
 		return nil
 	}

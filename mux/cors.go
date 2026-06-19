@@ -5,7 +5,7 @@ import (
 	"io"
 	"log"
 
-	veloneticscors "github.com/pucora/velonetics-cors/v2"
+	pucoracors "github.com/pucora/pucora-cors/v2"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 	"github.com/pucora/lura/v2/router/mux"
@@ -19,11 +19,11 @@ func New(e config.ExtraConfig) mux.HandlerMiddleware {
 }
 
 func NewWithLogger(e config.ExtraConfig, l logging.Logger) mux.HandlerMiddleware {
-	tmp := veloneticscors.ConfigGetter(e)
+	tmp := pucoracors.ConfigGetter(e)
 	if tmp == nil {
 		return nil
 	}
-	cfg, ok := tmp.(veloneticscors.Config)
+	cfg, ok := tmp.(pucoracors.Config)
 	if !ok {
 		return nil
 	}

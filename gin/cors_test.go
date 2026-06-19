@@ -26,7 +26,7 @@ func TestInvalidCfg(t *testing.T) {
 
 func TestNew(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/pucora-cors": {
 			"allow_origins": [ "http://foobar.com" ],
 			"allow_methods": [ "GET" ],
 			"max_age": "2h"
@@ -62,7 +62,7 @@ func TestNew(t *testing.T) {
 
 func TestAllowOriginWildcard(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/pucora-cors": {
 			"allow_origins": [ "*" ]
 			}
 		}`)
@@ -95,7 +95,7 @@ func TestAllowOriginWildcard(t *testing.T) {
 
 func TestAllowOriginEmpty(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/pucora-cors": {
 			}
 		}`)
 	json.Unmarshal(serialized, &sampleCfg)
@@ -137,7 +137,7 @@ func ExampleNewRunServerWithLogger() {
 	corsRunServer := NewRunServerWithLogger(next, l)
 
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/pucora-cors": {
 			"allow_origins": [ "http://foobar.com" ],
 			"allow_methods": [ "GET" ],
 			"max_age": "2h",
