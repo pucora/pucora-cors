@@ -12,8 +12,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
 )
 
 func TestInvalidCfg(t *testing.T) {
@@ -26,7 +26,7 @@ func TestInvalidCfg(t *testing.T) {
 
 func TestNew(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			"allow_origins": [ "http://foobar.com" ],
 			"allow_methods": [ "GET" ],
 			"max_age": "2h"
@@ -62,7 +62,7 @@ func TestNew(t *testing.T) {
 
 func TestAllowOriginWildcard(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			"allow_origins": [ "*" ]
 			}
 		}`)
@@ -95,7 +95,7 @@ func TestAllowOriginWildcard(t *testing.T) {
 
 func TestAllowOriginEmpty(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			}
 		}`)
 	json.Unmarshal(serialized, &sampleCfg)
@@ -137,7 +137,7 @@ func ExampleNewRunServerWithLogger() {
 	corsRunServer := NewRunServerWithLogger(next, l)
 
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			"allow_origins": [ "http://foobar.com" ],
 			"allow_methods": [ "GET" ],
 			"max_age": "2h",

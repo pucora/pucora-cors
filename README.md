@@ -1,14 +1,14 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/velonetics/velonetics-cors)](https://goreportcard.com/report/github.com/velonetics/velonetics-cors)  [![GoDoc](https://godoc.org/github.com/velonetics/velonetics-cors?status.svg)](https://godoc.org/github.com/velonetics/velonetics-cors)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pucora/velonetics-cors)](https://goreportcard.com/report/github.com/pucora/velonetics-cors)  [![GoDoc](https://godoc.org/github.com/pucora/velonetics-cors?status.svg)](https://godoc.org/github.com/pucora/velonetics-cors)
 
-Velonetics CORS
+Pucora CORS
 ====
 
-A set of building blocks for instrumenting [Velonetics](http://velonetics.io) gateways
+A set of building blocks for instrumenting [Pucora](http://pucora.io) gateways
 
 ## Available flavours
 
-1. [mux](github.com/velonetics/velonetics-cors/blob/master/mux) Mux based handlers
-2. [gin](github.com/velonetics/velonetics-cors/blob/master/gin) Gin based handlers
+1. [mux](github.com/pucora/velonetics-cors/blob/master/mux) Mux based handlers
+2. [gin](github.com/pucora/velonetics-cors/blob/master/gin) Gin based handlers
 
 Check the tests and the documentation for more details
 
@@ -28,7 +28,7 @@ At least one option should be defined.
 
 ```
   "extra_config": {
-    "github_com/velonetics/velonetics-cors": {
+    "github_com/pucora/velonetics-cors": {
       "allow_origins": [ "http://foobar.com" ],
       "allow_methods": [ "POST", "GET"],
       "max_age": "12h"
@@ -39,7 +39,7 @@ At least one option should be defined.
   or leave the defaults (the defaults allows all origins):
   ```
   "extra_config": {
-    "github_com/velonetics/velonetics-cors": {
+    "github_com/pucora/velonetics-cors": {
       "allow_origins": []
     }
   }

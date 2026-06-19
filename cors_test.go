@@ -8,7 +8,7 @@ import (
 
 func TestConfigGetter(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			"allow_origins": [ "http://localhost", "http://www.example.com" ],
 			"allow_headers": [ "X-Test", "Content-Type"],
 			"allow_methods": [ "POST", "GET" ],
@@ -63,7 +63,7 @@ func TestConfigGetter(t *testing.T) {
 
 func TestDefaultConfiguration(t *testing.T) {
 	sampleCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			"allow_origins": [ "http://www.example.com" ]
 	}}`)
 	json.Unmarshal(serialized, &sampleCfg)
@@ -86,7 +86,7 @@ func TestWrongConfiguration(t *testing.T) {
 
 func TestEmptyConfiguration(t *testing.T) {
 	noOriginCfg := map[string]interface{}{}
-	serialized := []byte(`{ "github_com/velonetics/velonetics-cors": {
+	serialized := []byte(`{ "github_com/pucora/velonetics-cors": {
 			}
 		}`)
 	json.Unmarshal(serialized, &noOriginCfg)

@@ -3,11 +3,11 @@ package cors
 import (
 	"time"
 
-	"github.com/velonetics/lura/v2/config"
+	"github.com/pucora/lura/v2/config"
 )
 
 // Namespace is the key to look for extra configuration details
-const Namespace = "github_com/velonetics/velonetics-cors"
+const Namespace = "github_com/pucora/velonetics-cors"
 
 // Config holds the configuration of CORS
 type Config struct {

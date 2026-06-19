@@ -5,10 +5,10 @@ import (
 	"io"
 	"log"
 
-	veloneticscors "github.com/velonetics/velonetics-cors/v2"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
-	"github.com/velonetics/lura/v2/router/mux"
+	veloneticscors "github.com/pucora/velonetics-cors/v2"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
+	"github.com/pucora/lura/v2/router/mux"
 	"github.com/rs/cors"
 )
 

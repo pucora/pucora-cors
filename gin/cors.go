@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	veloneticscors "github.com/velonetics/velonetics-cors/v2"
-	"github.com/velonetics/velonetics-cors/v2/mux"
-	"github.com/velonetics/lura/v2/config"
-	"github.com/velonetics/lura/v2/logging"
+	veloneticscors "github.com/pucora/velonetics-cors/v2"
+	"github.com/pucora/velonetics-cors/v2/mux"
+	"github.com/pucora/lura/v2/config"
+	"github.com/pucora/lura/v2/logging"
 	"github.com/rs/cors"
 	wrapper "github.com/rs/cors/wrapper/gin"
 )
@@ -50,7 +50,7 @@ func New(e config.ExtraConfig) gin.HandlerFunc {
 	})
 }
 
-// RunServer defines the interface of a function used by the Velonetics router to start the service
+// RunServer defines the interface of a function used by the Pucora router to start the service
 type RunServer func(context.Context, config.ServiceConfig, http.Handler) error
 
 // NewRunServer returns a RunServer wrapping the injected one with a CORS middleware, so it is called before the
