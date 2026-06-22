@@ -3,7 +3,7 @@
 Pucora CORS
 ====
 
-A set of building blocks for instrumenting [Pucora](http://pucora.io) gateways
+A set of building blocks for instrumenting [Pucora](http://pucora.in) gateways
 
 ## Available flavours
 
